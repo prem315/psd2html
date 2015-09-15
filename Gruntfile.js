@@ -12,22 +12,34 @@ module.exports = function(grunt) {
 	  watch: {
 		  css: {
 		    files: ['assets/stylesheets/src/*.scss'],
-		    tasks: ['sass'],
+		    tasks: ['sass', 'cssmin'],
 		  }
-		}
+		},
 
+	/*concat: {
+	    css: {
+	      src: ['assets/stylesheets/common.css', 'assets/stylesheets/land.css'],
+	      dest: 'assets/stylesheets/app.css',
+	    },
+	  },*/
 
-		
+	cssmin: {
+	  target: {
+	    files: {
+	      //'output.css': ['foo.css', 'bar.css']
+	       'assets/stylesheets/app.min.css' : ['assets/stylesheets/common.css', 'assets/stylesheets/land.css']
+	    }
+	  }
+	}
 
 
 	});
 	
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
-
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	//grunt.loadNpmTasks('grunt-contrib-connect');
-	//grunt.loadNpmTasks('grunt-http-server');
-	grunt.registerTask('default', ['sass', 'watch']);
+	//grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.registerTask('default', ['sass', 'cssmin','watch']);
 
 }
