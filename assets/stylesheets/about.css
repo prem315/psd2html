@@ -1,0 +1,49 @@
+#about {
+  background-color: #2e3b4d;
+  color: #FFFFFF;
+  padding: 15vh 0; }
+  #about h3 {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    font-weight: bold; }
+  #about p {
+    font-weight: normal; }
+
+#about-action {
+  background-color: #bc5063;
+  background-image: url("../images/tree.jpg");
+  background-size: cover;
+  color: white;
+  background-position: 50% 100%;
+  padding: 25vh 0;
+  text-align: center;
+  position: relative; }
+  #about-action::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0px;
+    border-top: 8vh solid #2e3b4d;
+    border-right: 8vw solid transparent;
+    border-left: 8vw solid transparent; }
+  #about-action h2 {
+    margin-bottom: 0.5em; }
+  #about-action p {
+    max-width: 50em;
+    margin: 0 auto; }
+  #about-action a {
+    background-color: #FFFFFF;
+    color: #ce404e;
+    margin: 1em 0;
+    padding: 0em 3em 0em 3em;
+    height: 3em;
+    line-height: 3em;
+    border-radius: 1.5em;
+    display: inline-block; }
+    #about-action a:hover {
+      text-decoration: none; }
+
+/*# sourceMappingURL=about.css.map */
